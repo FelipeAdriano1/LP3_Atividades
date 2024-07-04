@@ -1,0 +1,59 @@
+package br.banco.contaBancaria;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.random.*;
+
+public class Main {
+
+	public static void main(String args[]) throws IOException {
+		
+		contas conta = new contas();
+	
+		int escolha = 0;
+		boolean continuar = true;
+		
+		while(continuar) {
+			System.out.println("1 - Adicionar conta bancária.\n2 - Remover uma conta bancária.\n" + 
+			"3 - Consultar saldo\n4 - Listar uma conta\n5 - Depositar\n6 - Sacar\n7 - Sair\n");
+			
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			
+			System.out.println("Escolha uma opção: ");
+			
+			escolha = Integer.parseInt(reader.readLine());
+			
+			switch (escolha) {
+			
+			case 1: 
+				String nome;
+				int idade;
+				double saldo;
+				int numConta;
+				
+				System.out.println("Digite o nome do titular: ");
+				nome = reader.readLine();
+				
+				System.out.println("Digite a idade do titular: ");
+				idade = Integer.parseInt(reader.readLine());
+				
+				System.out.println("Digite o valor do depósito inicial: ");
+				saldo = Double.parseDouble(reader.readLine());
+				
+				System.out.println("Digite o número da conta: ");
+				numConta = Integer.parseInt(reader.readLine());
+				
+				contaBancaria cb = new contaBancaria(numConta, saldo, nome, idade);
+				
+				conta.addConta(cb);
+				
+				return;
+				
+			case 7: 
+				continuar = false;
+				break;
+			}
+		}
+	}
+}

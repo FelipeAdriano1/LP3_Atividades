@@ -1,0 +1,43 @@
+package br.banco.contaBancaria;
+
+public class contaBancaria {
+
+	private int numeroConta;
+	private double saldo;
+	
+	public contaBancaria(int numConta, double saldo) {
+		
+		this.saldo = saldo;
+		this.numeroConta = numConta;
+	}
+	
+	public String depositar(double deposito) {
+		
+		if(deposito < 0) {
+			System.out.println("Valor de depósito inválido.");
+		}
+		else {
+			saldo += deposito;
+		}
+		
+		return "Deposito efetuado com sucesso !";
+	}
+	
+	public double mostrarSaldo() {
+		
+		return saldo;
+	}
+	
+	public String sacar(double valor) {
+	
+		if(valor > saldo) {
+			System.out.println("Não há valor suficiente para o saque.");
+		}
+		else {
+			saldo -= valor;
+		}
+		
+		return "Saque efetuado com sucesso !";
+	}
+	
+}

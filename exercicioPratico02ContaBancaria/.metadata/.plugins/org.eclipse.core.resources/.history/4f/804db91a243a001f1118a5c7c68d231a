@@ -1,0 +1,65 @@
+package br.banco.contaBancaria;
+
+import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
+import java.util.List;
+
+public class contas {
+
+	private List<contaBancaria> contas = new ArrayList<>();
+
+	public String addConta(contaBancaria cb, int numConta) {
+
+		if (cb != null) {
+			for(contaBancaria cbBuscar : contas) {
+				if(numConta == cbBuscar.getNumConta()) {
+					return "\nConta existente.";
+				}
+				else {
+					contas.add(cb);
+					return "\nConta criada com sucesso !";
+				}
+			}
+		} else {
+			return "\nConta inválida.";
+		}
+		
+		return "Fim do cadastro";
+	}
+
+	public String listarConta(int numConta) {
+
+		for (contaBancaria cb : contas) {
+			if (numConta == cb.getNumConta()) {
+				return cb.getNome();
+			}
+			else {
+				return "\nConta não encontrada :(";
+			}
+		}
+		return null;
+	}
+	
+	public String excluirConta(int numConta) {
+		
+		contaBancaria cbExcluir = null;
+		
+		try {
+			for (contaBancaria cb : contas) {
+				if(numConta == cb.getNumConta()) {
+					cbExcluir = cb;
+					return "\nConta encontrada !";
+				}
+				else {
+					return "\nConta não encontrada.";
+				}
+			}
+		
+				contas.remove(cbExcluir);
+				return "\nConta encerrada com sucesso.";
+		}
+		catch(ConcurrentModificationException e) {
+			return e.getMessage();
+		}
+	}
+}

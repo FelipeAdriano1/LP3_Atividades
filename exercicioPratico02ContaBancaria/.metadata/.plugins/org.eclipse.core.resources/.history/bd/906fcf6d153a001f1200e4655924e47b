@@ -1,0 +1,45 @@
+package br.banco.contaBancaria;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String args[]) {
+		
+		/*contaBancaria cb0 = new contaBancaria(1980, 100.00, "Maria", 25);
+		contas conta = new contas();
+		
+		conta.addConta(cb0);
+		
+		conta.listarConta(1980);
+		
+		conta.excluirConta(19890);*/
+		int escolha = 0;
+		boolean continuar = true;
+		
+		while(continuar) {
+			System.out.println("1 - Adicionar conta bancária.\n2 - Remover uma conta bancária.\n" + 
+			"3 - Consultar saldo\n4 - Listar uma conta\n5 - Depositar\n6 - Sacar\n7 - Sair\n");
+			
+			
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			
+			System.out.println("Escolha uma opção: ");
+			
+			try {
+			escolha = Integer.parseInt(reader.readLine());
+			reader.close();
+			}
+			catch(IOException e) {
+				System.out.println(e);
+			}
+			
+			switch (escolha) {
+			
+			case 1: 
+			}
+		}
+	}
+}

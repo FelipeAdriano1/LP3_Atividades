@@ -1,0 +1,21 @@
+package br.banco.contaBancaria;
+
+public class contaBancaria {
+
+	private int numeroConta;
+	private double saldo;
+	
+	public contaBancaria(int numConta, double saldo) {
+		
+		this.saldo = saldo;
+		this.numeroConta = numConta;
+	}
+	
+	public String depositar(int numConta, double deposito) {
+		
+		if(deposito < 0) {
+			System.out.println("Valor de depósito inválido.");
+		}
+	}
+	
+}
