@@ -1,0 +1,10 @@
+package formaGeometrica;
+
+public class quadrado implements formaGeometrica {
+
+	public double calcularArea() {
+		double a = 10;
+		
+		return a;
+	}
+}

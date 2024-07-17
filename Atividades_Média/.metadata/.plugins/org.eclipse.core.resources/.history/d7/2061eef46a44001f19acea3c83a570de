@@ -1,0 +1,15 @@
+package poligono;
+import java.math.*;
+
+public class circulo extends poligono{
+
+	private int raio;
+	
+	double area() {
+		double result;
+		
+		result =  Math.PI * raio * raio;
+		
+		return result;
+	}
+}

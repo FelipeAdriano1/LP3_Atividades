@@ -1,0 +1,12 @@
+package poligono;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		poligono ret = new retangulo(10, 20);
+		poligono tri = new triangulo(24, 19);
+		
+		System.out.println(ret.area());
+	}
+}

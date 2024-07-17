@@ -1,0 +1,14 @@
+package poligono;
+import java.math.*;
+
+public class circulo extends poligono{
+
+	private int raio;
+	
+	int area() {
+		double pi = 3.14;
+		int result;
+		
+		result =  Math.PI * raio * raio;
+	}
+}

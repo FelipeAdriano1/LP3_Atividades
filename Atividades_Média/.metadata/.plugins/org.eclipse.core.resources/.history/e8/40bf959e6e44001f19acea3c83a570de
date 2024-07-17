@@ -1,0 +1,8 @@
+package agenda;
+import java.util.List;
+
+public class agenda {
+	
+	private List<> lista = new List<>();
+	
+}

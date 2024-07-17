@@ -1,0 +1,10 @@
+package contaBancaria;
+
+public class Main {
+
+	public static void main(String[] args) {
+		contaBancaria cb = new contaBancaria(1090, 100.50);
+		
+		cb.saldo();
+	}
+}

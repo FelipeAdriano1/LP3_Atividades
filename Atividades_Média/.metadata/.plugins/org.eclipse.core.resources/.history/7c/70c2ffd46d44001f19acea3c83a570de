@@ -1,0 +1,11 @@
+package contaBancariaException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		contaBancaria cb = new contaBancaria(1910, 600.50);
+		
+		System.out.println(cb.saldo());
+	}
+}

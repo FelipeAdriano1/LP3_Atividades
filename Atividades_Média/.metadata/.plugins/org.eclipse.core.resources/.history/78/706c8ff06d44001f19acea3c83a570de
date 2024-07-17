@@ -1,0 +1,15 @@
+package contaBancariaException;
+
+public class Main {
+
+	public static void main(String[] args) throws saldoInsuficienteException {
+		
+		contaBancaria cb = new contaBancaria(1910, 600.50);
+		
+		System.out.println(cb.saldo());
+		System.out.println(cb.depositar(10.25));
+		System.out.println(cb.saldo());
+		System.out.println(cb.sacar(90.67));
+		System.out.println(cb.saldo());
+	}
+}

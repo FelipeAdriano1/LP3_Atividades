@@ -1,0 +1,15 @@
+package agenda;
+
+public class Main {
+
+	public static void main(String[] args) {
+		compromissos comp1 = new compromissos("17-07-2024", "13:30", "Reunião com patrocinadores.");
+		compromissos comp2 = new compromissos("17-07-2024", "13:55", "Reunião com gerentes.");
+		agenda agenda = new agenda();
+		
+		agenda.addCompromisso(comp1);
+		agenda.addCompromisso(comp2);
+		
+		System.out.println(agenda.localizarComp("17-07-2024"));
+	}
+}

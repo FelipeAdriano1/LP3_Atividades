@@ -1,0 +1,18 @@
+package poligono;
+
+public class retangulo extends poligono{
+
+	private int largura;
+	private int altura;
+	
+	public retangulo(int largura, int altura) {
+		
+		this.largura = largura;
+		this.altura = altura;
+	}
+	
+	int area(){
+		int area = largura * altura;
+		return area;
+	}
+}

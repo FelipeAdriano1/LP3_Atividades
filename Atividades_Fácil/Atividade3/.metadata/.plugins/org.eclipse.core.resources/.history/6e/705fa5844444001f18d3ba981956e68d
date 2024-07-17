@@ -1,0 +1,16 @@
+package classeLivro;
+
+public class estudante {
+
+	private String nome;
+	private int idade;
+	private double nota;
+	
+	public boolean isApproved(double nota) {
+		if(nota > 7) {
+			return true;
+		}
+		
+		return false;
+	}
+}

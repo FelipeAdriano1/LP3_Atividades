@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\Users\Felipe\OneDrive\Documentos\IFSP\3SEMESTRE\Linguagem de Programação 3\exercicioPratico02ContaBancaria\.metadata\.plugins\org.eclipse.jdt.core
-1943152555.index
-1865797976.index
-4265634419.index

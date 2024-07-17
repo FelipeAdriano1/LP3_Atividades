@@ -1,0 +1,10 @@
+package poligono;
+
+public class Main {
+
+	public static void main(String[] args) {
+		poligono ret = new retangulo(10, 20);
+		
+		ret.area();
+	}
+}

@@ -1,0 +1,14 @@
+package poligono;
+
+public class triangulo {
+
+	private double base;
+	private double altura;
+	
+	double area() {
+		
+		double result;
+		
+		result = (base * altura) / 2;
+	}
+}

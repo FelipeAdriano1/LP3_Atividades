@@ -1,0 +1,34 @@
+package agenda;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
+
+public class agenda {
+	
+	private List<compromissos> lista;
+	
+	public agenda() {
+		lista = new ArrayList<>();
+	}
+	
+	public String addCompromisso(compromissos comp) {
+			
+		if(comp != null) {
+			lista.add(comp);
+			return "Compromisso adicionado com sucesso a agenda.";
+		}
+		else {
+			return "Não foi possível adicionar o compromisso a agenda.";
+		}
+	}
+	
+	public String localizarComp(String data) {
+		
+		for(compromissos l : lista) {
+			if(l.getData() == data) {
+				return "Data: " + l.getData() + "\nHora: " + l.getHora() + "\nDescrição: " + l.getDesc();
+			}
+		}
+		return null;
+	}
+}

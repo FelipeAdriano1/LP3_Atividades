@@ -1,0 +1,16 @@
+package formaGeometrica;
+
+public class quadrado implements formaGeometrica {
+
+	public double calcularArea(double area) {
+		double a = area * 2;
+		
+		return a;
+	}
+	
+	public double calcularPerimetro() {
+		double b = 20;
+		
+		return b;
+	}
+}

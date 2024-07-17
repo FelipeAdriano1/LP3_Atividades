@@ -1,0 +1,20 @@
+package formaGeometrica;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		quadrado quad = new quadrado(10);
+		circulo cir = new circulo(20);
+		retangulo ret = new retangulo(10, 20);
+		
+		System.out.println(quad.calcularArea());
+		System.out.println(quad.calcularPerimetro());
+		
+		System.out.println(cir.calcularArea());
+		System.out.println(cir.calcularArea());
+		
+		System.out.println(ret.calcularArea());
+		System.out.println(ret.calcularArea());
+	}
+}

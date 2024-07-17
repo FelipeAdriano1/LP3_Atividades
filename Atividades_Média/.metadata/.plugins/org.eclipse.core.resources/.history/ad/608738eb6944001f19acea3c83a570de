@@ -1,0 +1,12 @@
+package poligono;
+
+public class retangulo extends poligono{
+
+	int largura = 0;
+	int altura = 0;
+	
+	int area(){
+		int area = largura * altura;
+		return area;
+	}
+}

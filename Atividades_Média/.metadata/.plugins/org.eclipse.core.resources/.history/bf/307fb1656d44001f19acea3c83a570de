@@ -1,0 +1,38 @@
+package contaBancariaException;
+
+public class contaBancaria {
+
+	int numConta;
+	double saldo;
+	
+	public contaBancaria(int numConta, double saldo) {
+		this.numConta = numConta;
+		this.saldo = saldo;
+	}
+	
+	public String depositar(double valor) {
+		if(valor < 0) {
+			return "Depósito inválido.";
+		}
+		else {
+			saldo += valor;
+			return "Depósito realizado com sucesso !";
+		}
+	}
+	
+	public saldoInsuficienteException sacar(double valor) {
+		if(saldo < valor) {
+			saldoInsuficienteException erro = new saldoInsuficienteException("Saldo insuficiente.");
+			return erro;
+		}
+		else {
+			saldo -= valor;
+			return "Saque de R$" + valor + " realizado com sucesso.\nSaldo atual R$: " + saldo();
+		}
+	}
+	
+	public double saldo() {
+		return saldo;
+	}
+}
+
